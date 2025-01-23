@@ -1,31 +1,56 @@
-.MainDiv{
 
+
+@media (max-width:600px) {
+  
+  .LandingPageBox1 {
+    background-color: #232323;
+    display: flex; 
+    flex-direction: column;
+   }
+ 
+
+}
+
+@media (max-width:600px) {
+  
+  .LandingPageBox2{
+
+    min-width: 15rem;
+    min-height: 15rem;
+    padding: 0.5rem;
+   
+   }
+
+}
+
+.MainDiv{
   width: 100vw; /* 100% of the viewport width */
   height: 100vh; /* 100% of the viewport height */
-
-
 }
 
 
 .LandingPageBox1 {
   background-color: #232323;
-display: flex;
-
-}
+  display: flex; 
+  justify-content:space-evenly;
+ }
 .RightSideBox1{
 
-    margin-right: 2rem;
-}
-#Man{
-  max-width: 100%;
-  max-height: 25rem;
-  height: auto;
+  display: flex;
+    justify-content: center;
   
 }
 .LeftSideBox1{ 
-margin-left: 3rem;
-float: left;
+text-align: center;
+padding-bottom: 2rem;
 }
+#Man{
+  max-width: 100%;
+  min-width: 70%;
+  max-height: 25rem;
+  min-height:25rem ;
+}
+
 
 #ShopNow{
   border-color: red;
@@ -34,12 +59,46 @@ float: left;
 
 
 
-
+/*///////////////////////////////////////////*/
 .LandingPageBox2 {
-  background-color: #232323;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
 
-  background-color: blue;
 }
+.MenAndWoman{
+
+
+
+}
+#Man{
+  padding: 1rem;
+  max-width: 70%;
+  min-width: 70%;
+  max-height: 25rem;
+  min-height:25rem ;
+}
+#Women{
+  padding: 1rem;
+  max-width: 70%;
+  min-width: 20%;
+  max-height: 25rem;
+  min-height:25rem ;
+}
+#CategoryText{
+
+  color: black;
+  font-style: italic;
+  font-size: 20px;
+}
+
+
+
+
+/*///////////////////////////////////////////*/
+
 .LandingPageBox3 {
   background-color: #232323;
 
