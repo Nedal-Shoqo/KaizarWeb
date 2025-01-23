@@ -1,29 +1,36 @@
+.MainDiv{
+
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+
+
+}
+
+
 .LandingPageBox1 {
   background-color: #232323;
-min-height: 50vh;
-min-width: 100vw;
+display: flex;
 
-
-
-align-items: center;
-  background-color: rgb(78, 81, 81);
 }
 .RightSideBox1{
 
-    float: right;
+    margin-right: 2rem;
 }
-.Man{
-  width: 50px;
-  width: 100px;
-  object-fit: cover;
+#Man{
+  max-width: 100%;
+  max-height: 25rem;
+  height: auto;
   
 }
-.leftSideBox1{
-
-float:left;
-
+.LeftSideBox1{ 
+margin-left: 3rem;
+float: left;
 }
 
+#ShopNow{
+  border-color: red;
+  border-width: 2px;
+}
 
 
 
