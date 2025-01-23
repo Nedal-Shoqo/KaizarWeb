@@ -22,8 +22,8 @@ function App() {
 
       <div className="LandingPageBox2"> 
         <div className="MenAndWoman"> 
-        <img id="MenAndWomen"  src="src\assets\Pics\LandingPage\Man.png" alt="Category" />
-        <img id="MenAndWomen"  src="src\assets\Pics\LandingPage\Women.png" alt="Category" />
+        <img id="Men"  src="src\assets\Pics\LandingPage\Man.png" alt="Category" />
+        <img id="Woman"  src="src\assets\Pics\LandingPage\Women.png" alt="Category" />
         </div>
         
         <p id="CategoryText"> Be the first to know about 
