@@ -58,6 +58,10 @@
       height: 300px !important;
     }
 }
+
+
+
+
 .MainDiv{
   width: 100vw; /* 100% of the viewport width */
   height: 80vh; /* 100% of the viewport height */
@@ -79,6 +83,48 @@
 .LeftSideBox1{ 
 text-align: center;
 }
+.ArrivedNowDecoration{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#Line{
+
+  color: red;
+  font-size: 50px;
+
+}
+
+
+#_{
+
+  color: red;
+  font-size: 20px;
+margin-top: 10px;
+margin-right: 2px;
+
+}
+#_2{
+
+  color: red;
+  font-size: 20px;
+margin-top: 10px;
+margin-left: 2px;
+
+}
+
+.MenSectionText{
+
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  justify-content: center;
+
+
+  
+}
+
+
 #Man{
   max-width: 120%;
   min-width: 70%;
