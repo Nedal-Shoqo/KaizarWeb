@@ -1,3 +1,4 @@
+import "./SignInForm.css"
 const SignIn =()=> {
 
 return(
@@ -5,16 +6,16 @@ return(
 <div className=" SignInMain"> 
 <form>
 <div>
-  <label htmlFor="email">Email</label>
+  <label htmlFor="email">Email</label><br/>
   <input type="email" id="email" name="email" placeholder="Enter your email" />
 </div>
 
-<div>
-  <label htmlFor="password">Password</label>
+<div><br/>
+  <label htmlFor="password">Password</label><br/>
   <input type="password" id="password" name="password" placeholder="Enter your password" />
 </div>
 
-<button type="submit">Sign In</button>
+<button type="submit" id="SignInButton">Sign In</button>
 </form>
 </div>
 

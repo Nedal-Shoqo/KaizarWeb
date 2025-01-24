@@ -1,41 +1,97 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 import SignUp from "./Components/LandingPage/SignUp/SignUp";
 import SignIn from "./Components/LandingPage/SignIn/SignInForm";
 
 function App() {
 
 
+  const isMobile = useMediaQuery({ maxWidth: 580 });
+  const [coverContent,setCover] = useState("Already have an account??")
   const [content,changeContent] = useState("SignIn");
   const [style, setStyle] = useState({
-    position: 'absolute',
-    backgroundColor: 'rgb(146, 35, 35)',
-    height: '90vh',
-    width: '50%',
-    transition: 'transform 1s ease',
-    overflow: 'hidden',
-    display: 'flex', 
-    alignItems: 'center', 
-    flexDirection: 'column-reverse',
-    fontSize: '2rem',  // Larger font size
-    fontFamily: 'Times New Roman, serif'
 
+
+    
+      
+      position: 'absolute',
+      backgroundColor: 'rgb(146, 35, 35)',
+      height: '90vh',
+      width: '50%',
+      transition: 'transform 1s ease',
+      overflow: 'hidden',
+      display: 'flex', 
+      alignItems: 'center', 
+      flexDirection: 'column',
+      justifyContent: 'center', // Center content vertically
+      fontSize: '2rem',
+      fontFamily: 'Times New Roman, serif'
+  
+  
       // Prevent overflow
   })
+
+useEffect( () =>{
+  setStyle({
+    ...style,
+    height: '45vh',
+    width: '100%',
+  });
+},[isMobile])
+
+useEffect(() => {
+  setStyle((prevStyle) => ({
+    ...prevStyle,
+    height: isMobile ? "45vh" : "90vh",
+    width: isMobile ? "100%" : "50%",
+    transform: "translateY(0)", // Reset on screen resize
+  }));
+}, [isMobile]);
   
   const handleClick = () => {
-    if (content === "SignIn") {
-      changeContent("Register");
-      setStyle({
-        ...style,
-        transform: 'translateX(100%)',
-      });
-    } else if (content === "Register") {
-      changeContent("SignIn");
-      setStyle({
-        ...style,
-        transform: 'translateX(0)',
-      });
+    if (isMobile) {
+      if (content === "SignIn") {
+        changeContent("Register");
+        setCover("Need an account?")
+        setStyle({
+          ...style,
+          transform: 'translateY(100%)',
+          height: '45vh',
+          width: '100%',
+        });
+      } else {
+        changeContent("SignIn");
+        setCover("Already have an account?? ")
+        setStyle({
+          ...style,
+          transform: 'translateY(0)',
+          height: '45vh',
+          width: '100%',
+        });
+      }
+    } else {
+      if (content === "SignIn") {
+        changeContent("Register");
+        setCover("Need an account? ")
+
+        setStyle({
+          ...style,
+          transform: 'translateX(100%)',
+          height: '90vh',
+          width: '50%',
+        });
+      } else {
+        changeContent("SignIn");
+                setCover("Already have an account?? ")
+
+        setStyle({
+          ...style,
+          transform: 'translateX(0)',
+          height: '90vh',
+          width: '50%',
+        });
+      }
     }
   };
 
@@ -91,8 +147,12 @@ function App() {
         <div id="SignIn"><SignIn /></div>
         <div id="SignUp"> <SignUp /> </div>
         <div id="Cover" style={style}>
+          <p id="CoverContent"> {coverContent} </p>
           <button id="Switch" onClick={handleClick}> {content} </button>
         </div>   
+           </div>
+           <div className="LandingPage4">
+fasf
            </div>
     </div>
   );

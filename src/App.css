@@ -57,7 +57,7 @@
     }
 }
 
-@media (max-width :450px){
+@media (max-width :580px){
 
 .LandingPageBox3
 {
@@ -67,7 +67,7 @@
   justify-content: center;
 }
 #SignIn{
-
+margin-right: 10rem;
   margin-top: 5rem;
 }
 
@@ -259,14 +259,12 @@ transition: 0.5s ease;
   background-repeat: no-repeat; 
   width: 100vw; /* 100% of the viewport width */
   height: 90vh;
-display: flex;
-justify-content: space-between;
-align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 
 
 
-  word-wrap: break-word; /* Ensures long words wrap to the next line */
-  overflow-wrap: break-word; /* Modern alternative for the same behavior */
 
 
 }
@@ -281,9 +279,15 @@ margin-left: 3rem;
   margin-right: 3rem;
   }
 
+  #CoverContent{
+margin: 5rem;
+  }
+  
 #Switch{
   background-color: rgb(146, 35, 35);
-
+  margin-bottom: 2rem;
+  border-color: rgb(153, 85, 85);
+justify-content: baseline;
 }
 
 

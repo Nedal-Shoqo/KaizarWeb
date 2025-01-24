@@ -1,0 +1,49 @@
+.SignUpMain{
+   margin-right: 3rem;
+   margin-top: 4rem;
+}
+#fullName{
+    background: transparent;
+    border: 1px solid rgb(134, 53, 53);
+    border-radius: 10px;
+height: 25px;
+}
+
+#email{
+    background: transparent;
+    border: 1px solid rgb(134, 53, 53);
+    border-radius: 10px;    height: 25px;
+}
+#password{
+    background: transparent;
+    border: 1px solid rgb(134, 53, 53);
+    border-radius: 10px;
+    height: 25px;
+}
+#confirmPassword{
+    background: transparent;
+    border: 1px solid rgb(134, 53, 53);
+    border-radius: 10px;
+    height: 25px;
+}
+#fullName:hover,#email:hover,#password:hover,#confirmPassword:hover{
+
+    background-color:white;
+    transition-duration: 0.5s;
+
+}
+
+#SignUpButton{
+
+    background-color: rgb(184, 75, 75);
+
+    margin-top: 2rem;
+    width: 100%;
+}
+
+#SignUpButton:hover{
+    background-color:rgb(34, 31, 31);
+    transition-duration: 1.5s;
+}
+
+ 
