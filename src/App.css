@@ -11,8 +11,6 @@
  
 
 }
-
-
 @media (max-width: 1040px) {
   #Men {
     width: 300px !important;
@@ -59,7 +57,25 @@
     }
 }
 
+@media (max-width :450px){
 
+.LandingPageBox3
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#SignIn{
+
+  margin-top: 5rem;
+}
+
+#SignUp{
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+}
+}
 
 
 .MainDiv{
@@ -211,7 +227,6 @@ transition: 0.5s ease;
   background-repeat: no-repeat; 
   display:flex ;
   flex-direction:column-reverse;
-  
   justify-content: center;
   align-items:center;/* Prevents the image from repeating */
 }
@@ -239,6 +254,36 @@ transition: 0.5s ease;
 .LandingPageBox3{
 
   background-image: url(assets/Pics/LandingPage/BackGroundRed.png);
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; 
   width: 100vw; /* 100% of the viewport width */
   height: 90vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+
+  word-wrap: break-word; /* Ensures long words wrap to the next line */
+  overflow-wrap: break-word; /* Modern alternative for the same behavior */
+
+
 }
+
+#SignIn{
+position: relative;
+margin-left: 3rem;
+}
+#SignUp{
+  position: relative;
+
+  margin-right: 3rem;
+  }
+
+#Switch{
+  background-color: rgb(146, 35, 35);
+
+}
+
+
