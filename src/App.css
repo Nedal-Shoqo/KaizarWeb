@@ -6,29 +6,61 @@
     background-color: #232323;
     display: flex; 
     flex-direction: column;
+    gap: 20px;
    }
  
 
 }
 
-@media (max-width:700px) {
-  
-  #Men{
-    width: 120px;
-    height: 20%;
-    object-fit: cover;
-  }
-  #Woman{
-    width: 120px;
-    height: 20%;
-    object-fit: cover;
-  }
 
+@media (max-width: 1040px) {
+  #Men {
+    width: 300px !important;
+    height: 400px !important;
+  }
+  #Woman {
+    width: 300px !important;
+    height: 400px !important;
+  }
+}
+@media (max-width: 700px) {
+  #Men {
+    width: 250px !important;
+    height: 400px !important;
+    
+  }
+  #Woman {
+    width: 250px !important;
+    height: 400px !important;
+  }
 }
 
+@media (max-width: 550px) {
+  #Men {
+    width: 200px !important;
+    height: 300px !important;
+    
+  }
+  #Woman {
+    width: 200px !important;
+    height: 300px !important;
+  }
+}
+
+  @media (max-width: 445px) {
+    #Men {
+      width: 150px !important;
+      height: 300px !important;
+      
+    }
+    #Woman {
+      width: 150px !important;
+      height: 300px !important;
+    }
+}
 .MainDiv{
   width: 100vw; /* 100% of the viewport width */
-  height: 100vh; /* 100% of the viewport height */
+  height: 80vh; /* 100% of the viewport height */
 }
 
 
@@ -46,7 +78,6 @@
 }
 .LeftSideBox1{ 
 text-align: center;
-padding-bottom: 2rem;
 }
 #Man{
   max-width: 120%;
@@ -68,39 +99,90 @@ padding-bottom: 2rem;
   background-color: white;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
   align-items: center;
   overflow-wrap: normal;
+  padding: 5rem;
 
 }
 .MenAndWoman{
+background-color: rgb(0, 0, 0);
+display: flex;
+
 
 
 }
 #Men{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  max-width: 70%;
-  min-width: 20%;
-  max-height: 25rem;
-  min-height:25rem ;
+  background-image: url(assets\Pics\LandingPage\Man.png);
+  width:500px;
+  height: 35rem;
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; 
+
+
+
+
+  display:flex ;
+  flex-direction:column-reverse;
+
+  justify-content: center;
+  align-items:center;
+
 }
+#MenText{
+  opacity: 0;
+}
+#MenButton{
+  opacity:  0;
+  width:  50%;
+  margin-top: 15rem;
+}
+#WomanText{
+  opacity: 0;
+}
+#WomanButton{
+opacity: 0;
+width:  50%;
+  margin-top: 15rem;
+}
+
+#Men:hover{
+  opacity: 50%;
+transition: 0.5s ease;
+
+}
+#Men:hover #MenText, 
+#Men:hover #MenButton {
+  opacity: 1; /* Make the text and button visible */
+}
+
 #Woman{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-  max-width: 70%;
-  min-width: 20%;
-  max-height: 25rem;
-  min-height:25rem ;
+  background-image: url(assets\Pics\LandingPage\Women.png);
+  width:500px;
+  height: 35rem;
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; 
+  display:flex ;
+  flex-direction:column-reverse;
+  
+  justify-content: center;
+  align-items:center;/* Prevents the image from repeating */
+}
+#Woman:hover{
+  opacity: 50%;
+transition: 0.5s ease;
+}
+#Woman:hover #WomanText, 
+#Woman:hover #WomanButton {
+  opacity: 1; /* Make the text and button visible */
 }
 #CategoryText{
 
   color: black;
   font-style: italic;
   font-size: 20px;
-  margin: 1rem;
+  margin-left: 2.1rem;
 }
 
 
@@ -108,8 +190,9 @@ padding-bottom: 2rem;
 
 /*///////////////////////////////////////////*/
 
-.LandingPageBox3 {
-  background-color: #232323;
+.LandingPageBox3{
 
-  background-color: blue;
+  background-image: url(assets/Pics/LandingPage/BackGroundRed.png);
+  width: 100vw; /* 100% of the viewport width */
+  height: 90vh;
 }

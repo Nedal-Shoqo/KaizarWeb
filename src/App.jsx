@@ -22,8 +22,19 @@ function App() {
 
       <div className="LandingPageBox2"> 
         <div className="MenAndWoman"> 
-        <img id="Men"  src="src\assets\Pics\LandingPage\Man.png" alt="Category" />
-        <img id="Woman"  src="src\assets\Pics\LandingPage\Women.png" alt="Category" />
+
+
+         
+        <div id="Men">
+         <p id="MenText"> Discover The Mans World </p>
+      <button id="MenButton"> View Now!</button>
+
+        </div>
+
+        <div id="Woman" >
+        <p id="WomanText"> Explore The Womens Fashion </p>
+        <button id="WomanButton"> Join Now!</button>
+        </div>
         </div>
         
         <p id="CategoryText"> Be the first to know about 
@@ -32,7 +43,9 @@ function App() {
 
 
 
-      <div className="LandingPageBox1"> 3 </div>
+      <div className="LandingPageBox3"> 
+        
+        </div>
     </div>
   );
 }
