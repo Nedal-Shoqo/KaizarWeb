@@ -4,7 +4,7 @@ const SignUp =()=>{
 
 return(
 <div className="SignUpMain"> 
-<form>
+<form id="form1">
   <div><br/>
     <label htmlFor="fullName">Full Name</label> <br/>
     <input type="text" id="fullName" name="fullName" placeholder="  Enter your full name" />

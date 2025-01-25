@@ -1,5 +1,4 @@
 
-
 @media (max-width:600px) {
   
   .LandingPageBox1 {
@@ -7,17 +6,11 @@
     display: flex; 
     flex-direction: column;
     gap: 20px;
+
    }
  
-   @media (max-width:1000px){
-
-    .LandingPageBox4{
   
-     
-      height: 20vh;
-      
-      }
-  }
+
 }
 @media (max-width: 1040px) {
   #Men {
@@ -28,6 +21,7 @@
     width: 300px !important;
     height: 400px !important;
   }
+ 
 }
 @media (max-width: 700px) {
   #Men {
@@ -65,7 +59,7 @@
     }
 }
 
-@media (max-width :580px){
+@media (max-width :750px){
 
 .LandingPageBox3
 {
@@ -73,18 +67,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+
   
 }
+
 #SignIn{
 margin-right: 10rem;
   margin-top: 5rem;
 }
 
 #SignUp{
-  margin-top: 3rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
 }
 }
+
+
 
 
 .MainDiv{
@@ -261,8 +260,7 @@ transition: 0.5s ease;
 /*///////////////////////////////////////////*/
 
 .LandingPageBox3{
-
-  background-image: url(assets/Pics/LandingPage/BackGroundRed.png);
+  background:linear-gradient(rgb(61, 57, 57), rgb(146, 35, 35));
   background-size: cover; /* Ensures the image covers the div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; 
@@ -271,10 +269,11 @@ transition: 0.5s ease;
  display: flex;
  justify-content: space-between;
  align-items: center;
-
+padding-bottom: 20px;
    
 
 }
+
 
 #SignIn{
 position: relative;
@@ -284,11 +283,9 @@ margin-bottom: 1rem;
 #SignUp{
   position: relative;
    height: 80%;
-  margin-right: 4.5rem;
-  margin-bottom: 1rem;
-  overflow: auto;
-  scrollbar-width: 1px;
-scrollbar-width:thin;
+  margin-right: 7rem;
+  
+
   }
 
   #CoverContent{
@@ -321,14 +318,14 @@ height: 100%;
 .LandingPageBox4{
 
 width: 100vw; /* 100% of the viewport width */
-height: 90vh;
+
 background-color: white;
 }
 #BackGroundImgBox4{
   
     width: 100%; /* Ensures the image doesn't overflow its container */
-    height: auto;    /* Maintains the aspect ratio */
-    display: block;  /* Removes any extra space below the image */
+    height: auto; 
+    object-fit: fill;   /* Maintains the aspect ratio */
   padding-top: 2rem;
   
 }

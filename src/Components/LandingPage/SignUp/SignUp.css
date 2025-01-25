@@ -1,7 +1,54 @@
+
+
+    
+@media (max-width :750px){
+
+    #form1 {
+         margin-right: 2rem;
+        float: left   ;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adds space between the elements */
+        margin-left: 2rem;
+    }
+    
+    #form1 div {
+        flex: 1 1 100%; /* Full width for each div */
+        display: flex;
+        flex-direction: row; /* Ensures the label and input are stacked vertically */
+    }
+    #form1 label {
+        flex: 1 1 100%; /* Full width for each div */
+        display: flex;
+        flex-direction: row; /* Ensures the label and input are stacked vertically */
+    }
+    
+    #form1 input {
+    
+        width: 100%;
+    }
+    #SignUpButton{
+
+        background-color: rgb(184, 75, 75);
+       margin-left: 1.5rem;
+        width: 50%;
+       }
+
+    }
 .SignUpMain{
    margin-right: 3rem;
-   margin-top: 4rem;
+   margin-top: 2rem;
 }
+
+#form1 {
+    margin-right: 2rem;
+   float: left   ;
+   display: flex;
+   flex-direction: column;
+   gap: 10px; /* Adds space between the elements */
+   margin-top: 1.3rem;
+}
+
 #fullName{
     background: transparent;
     border: 1px solid rgb(134, 53, 53);
@@ -35,15 +82,19 @@ height: 25px;
 
 #SignUpButton{
 
-    background-color: rgb(184, 75, 75);
-
-    margin-top: 2rem;
-    width: 100%;
+ background-color: rgb(184, 75, 75);
+margin-left: 1rem;
+margin-top: 1rem;
+ width: 70%;
 }
 
 #SignUpButton:hover{
     background-color:rgb(34, 31, 31);
     transition-duration: 1.5s;
+}
+#form1{
+    height:100%;
+    width: 100%;
 }
 
  

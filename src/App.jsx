@@ -7,7 +7,7 @@ import SignIn from "./Components/LandingPage/SignIn/SignInForm";
 function App() {
 
 
-  const isMobile = useMediaQuery({ maxWidth: 580 });
+  const isMobile = useMediaQuery({ maxWidth: 750 });
   const [coverContent,setCover] = useState("Already have an account??")
   const [content,changeContent] = useState("SignIn");
     const [style, setStyle] = useState({
@@ -17,7 +17,8 @@ function App() {
       
       position: 'absolute',
       backgroundColor: 'rgb(146, 35, 35)',
-      height: '90vh',
+      height: '92.5vh',
+      marginTop:'1.4rem',
       width: '50%',
       transition: 'transform 1s ease',
       overflow: 'hidden',
@@ -26,8 +27,8 @@ function App() {
       flexDirection: 'column',
       justifyContent: 'center', // Center content vertically
       fontSize: '2rem',
-      fontFamily: 'Times New Roman, serif'
-  
+      fontFamily: 'Times New Roman, serif',
+
   
       // Prevent overflow
   })
@@ -43,9 +44,10 @@ useEffect( () =>{
 useEffect(() => {
   setStyle((prevStyle) => ({
     ...prevStyle,
-    height: isMobile ? "45vh" : "90vh",
+    height: isMobile ? "45vh" : "92.5vh",
+    marginTop: isMobile ? '0rem': '1.4rem',
     width: isMobile ? "100%" : "50%",
-    transform: "translateY(0)", // Reset on screen resize
+    transform: "translateY(-10)", // Reset on screen resize
   }));
 }, [isMobile]);
   
@@ -56,7 +58,7 @@ useEffect(() => {
         setCover("Need an account?")
         setStyle({
           ...style,
-          transform: 'translateY(100%)',
+          transform: 'translateY(107%)',
           height: '45vh',
           width: '100%',
         });
@@ -77,7 +79,8 @@ useEffect(() => {
         setStyle({
           ...style,
           transform: 'translateX(100%)',
-          height: '90vh',
+          height: '92.5vh',
+          marginTop:'1.4rem',
           width: '50%',
         });
       } else {
@@ -87,7 +90,8 @@ useEffect(() => {
         setStyle({
           ...style,
           transform: 'translateX(0)',
-          height: '90vh',
+          height: '92.5vh',
+          marginTop:'1.4rem',
           width: '50%',
         });
       }
@@ -143,13 +147,16 @@ useEffect(() => {
       </div>
 
       <div className="LandingPageBox3">
+
         <div id="SignIn"><SignIn /></div>
         <div id="SignUp"> <SignUp /> </div>
         <div id="Cover" style={style}>
           <img  id="Slider" src={"src/assets/Pics/LandingPage/Slider3.png"}  />
           <p id="CoverContent"> {coverContent} </p>
           <button id="Switch" onClick={handleClick}> {content} </button>
-        </div>   
+       </div>
+        
+          
            </div>
            <div className="LandingPageBox4">
             <img id="BackGroundImgBox4" src="src/assets/Pics/LandingPage/Box4.png"/>
