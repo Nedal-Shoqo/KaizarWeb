@@ -151,8 +151,9 @@ useEffect(() => {
           <button id="Switch" onClick={handleClick}> {content} </button>
         </div>   
            </div>
-           <div className="LandingPage4">
-fasf
+           <div className="LandingPageBox4">
+            <img id="BackGroundImgBox4" src="src/assets/Pics/LandingPage/Box4.png"/>
+
            </div>
     </div>
   );

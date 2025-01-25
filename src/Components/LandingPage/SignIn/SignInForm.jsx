@@ -7,12 +7,12 @@ return(
 <form>
 <div>
   <label htmlFor="email">Email</label><br/>
-  <input type="email" id="email" name="email" placeholder="Enter your email" />
+  <input type="email" id="email" name="email" placeholder="  Enter your email" />
 </div>
 
 <div><br/>
   <label htmlFor="password">Password</label><br/>
-  <input type="password" id="password" name="password" placeholder="Enter your password" />
+  <input type="password" id="password" name="password" placeholder="  Enter your password" />
 </div>
 
 <button type="submit" id="SignInButton">Sign In</button>

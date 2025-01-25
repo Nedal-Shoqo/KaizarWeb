@@ -263,20 +263,22 @@ transition: 0.5s ease;
  justify-content: space-between;
  align-items: center;
 
-
-
-
+ overflow: hidden; /* Hides the content that overflows */
+ /* or */
+ overflow: auto;  
 
 }
 
 #SignIn{
 position: relative;
 margin-left: 3rem;
+margin-bottom: 1rem;
 }
 #SignUp{
   position: relative;
 
   margin-right: 3rem;
+  margin-bottom: 1rem;
   }
 
   #CoverContent{
@@ -290,4 +292,18 @@ margin: 5rem;
 justify-content: baseline;
 }
 
+.LandingPageBox4{
 
+width: 100vw; /* 100% of the viewport width */
+height: 90vh;
+background-color: white;
+}
+#BackGroundImgBox4{
+  
+    width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto;    /* Maintains the aspect ratio */
+    display: block;  /* Removes any extra space below the image */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+}
