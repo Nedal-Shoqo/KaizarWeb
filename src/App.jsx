@@ -10,7 +10,7 @@ function App() {
   const isMobile = useMediaQuery({ maxWidth: 580 });
   const [coverContent,setCover] = useState("Already have an account??")
   const [content,changeContent] = useState("SignIn");
-  const [style, setStyle] = useState({
+    const [style, setStyle] = useState({
 
 
     
@@ -74,7 +74,6 @@ useEffect(() => {
       if (content === "SignIn") {
         changeContent("Register");
         setCover("Need an account? ")
-
         setStyle({
           ...style,
           transform: 'translateX(100%)',
@@ -147,7 +146,7 @@ useEffect(() => {
         <div id="SignIn"><SignIn /></div>
         <div id="SignUp"> <SignUp /> </div>
         <div id="Cover" style={style}>
-          <img  id="noise" src="src/assets/Pics/LandingPage/Noise.png"  />
+          <img  id="Slider" src={"src/assets/Pics/LandingPage/Slider3.png"}  />
           <p id="CoverContent"> {coverContent} </p>
           <button id="Switch" onClick={handleClick}> {content} </button>
         </div>   

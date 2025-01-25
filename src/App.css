@@ -305,11 +305,17 @@ position: relative;
 
 }
 
-  #noise{
-
+  #Slider{
+width: 100% ;
+height: 100%;
     position:absolute;
+    object-position: center;
+    opacity: 70%;
+    filter: blur(5px);
+    object-fit: cover;
 
   }
+ 
 
 /* //////////////////////////////////////////// */
 .LandingPageBox4{
@@ -340,6 +346,7 @@ background-color: white;
       display: block;  /* Removes any extra space below the image */
     padding-top: 2rem;
     padding-bottom: 2rem;
+  
     
   }
 
