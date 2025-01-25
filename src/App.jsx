@@ -10,28 +10,23 @@ function App() {
   const isMobile = useMediaQuery({ maxWidth: 750 });
   const [coverContent,setCover] = useState("Already have an account??")
   const [content,changeContent] = useState("SignIn");
-    const [style, setStyle] = useState({
-
-
-    
-      
-      position: 'absolute',
-      backgroundColor: 'rgb(146, 35, 35)',
-      height: '92.5vh',
-      marginTop:'1.4rem',
-      width: '50%',
-      transition: 'transform 1s ease',
-      overflow: 'hidden',
-      display: 'flex', 
-      alignItems: 'center', 
-      flexDirection: 'column',
-      justifyContent: 'center', // Center content vertically
-      fontSize: '2rem',
-      fontFamily: 'Times New Roman, serif',
-
-  
-      // Prevent overflow
+  const [style, setStyle] = useState({
+    position: 'absolute',
+    backgroundColor: 'rgb(146, 35, 35)',
+    height: '92.5vh',
+    marginTop: '1.4rem',
+    width: '50%',
+    transition: 'transform 1s ease',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    fontSize: '2rem',
+    fontFamily: 'Times New Roman, serif',
+    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)', // Add the box shadow here
   })
+  
 
 useEffect( () =>{
   setStyle({

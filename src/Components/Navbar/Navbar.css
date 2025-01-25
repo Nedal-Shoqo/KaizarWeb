@@ -1,0 +1,61 @@
+/* Reset for consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .Header {
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 60px; /* Adjust as needed */
+    background-color: #232323; /* Background color */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between leftSide and Nav */
+    z-index: 1000; /* Ensures it appears above other elements */
+    padding: 0 20px; /* Add some horizontal padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  
+  .leftSide {
+    display: flex; /* Align Menu and Logo side by side */
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Space between the Menu and Logo */
+  }
+  
+  .Menu img, .Logo img {
+    height: 30px; /* Adjust icon sizes */
+    cursor: pointer; /* Makes them clickable */
+    margin: 10px;
+  }
+  
+  .Nav {
+    display: flex; /* Align navigation items side by side */
+    align-items: center; /* Vertically center items */
+    gap: 20px; /* Space between nav links */
+  }
+  
+  .Nav a {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  /* Add specific images for WishList, Account, and Cart */
+  .WishList {
+    background-image: url('src/assets/Pics/NavBar/WishList.png');
+  }
+  
+  .Account {
+    background-image: url('src/assets/Pics/NavBar/Account.png');
+  }
+  
+  .Cart {
+    background-image: url('src/assets/Pics/NavBar/Cart.png');
+  }
+  
