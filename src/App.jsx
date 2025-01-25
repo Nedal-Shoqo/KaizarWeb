@@ -147,14 +147,19 @@ useEffect(() => {
         <div id="SignIn"><SignIn /></div>
         <div id="SignUp"> <SignUp /> </div>
         <div id="Cover" style={style}>
+          <img  id="noise" src="src/assets/Pics/LandingPage/Noise.png"  />
           <p id="CoverContent"> {coverContent} </p>
           <button id="Switch" onClick={handleClick}> {content} </button>
         </div>   
            </div>
            <div className="LandingPageBox4">
             <img id="BackGroundImgBox4" src="src/assets/Pics/LandingPage/Box4.png"/>
+           </div>
+           <div className="LandingPageBox5">
+            <img id="BackGroundImgBox5" src="src/assets/Pics/LandingPage/Box5.png"/>
 
            </div>
+
     </div>
   );
 

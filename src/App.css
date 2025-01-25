@@ -9,7 +9,15 @@
     gap: 20px;
    }
  
+   @media (max-width:1000px){
 
+    .LandingPageBox4{
+  
+     
+      height: 20vh;
+      
+      }
+  }
 }
 @media (max-width: 1040px) {
   #Men {
@@ -65,6 +73,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 #SignIn{
 margin-right: 10rem;
@@ -72,7 +81,7 @@ margin-right: 10rem;
 }
 
 #SignUp{
-  margin-bottom: 5rem;
+  margin-top: 3rem;
   margin-left: 1rem;
 }
 }
@@ -263,9 +272,7 @@ transition: 0.5s ease;
  justify-content: space-between;
  align-items: center;
 
- overflow: hidden; /* Hides the content that overflows */
- /* or */
- overflow: auto;  
+   
 
 }
 
@@ -276,22 +283,35 @@ margin-bottom: 1rem;
 }
 #SignUp{
   position: relative;
-
-  margin-right: 3rem;
+   height: 80%;
+  margin-right: 4.5rem;
   margin-bottom: 1rem;
+  overflow: auto;
+  scrollbar-width: 1px;
+scrollbar-width:thin;
   }
 
   #CoverContent{
 margin: 5rem;
+position: relative;
   }
   
 #Switch{
   background-color: rgb(146, 35, 35);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   border-color: rgb(153, 85, 85);
 justify-content: baseline;
+position: relative;
+
 }
 
+  #noise{
+
+    position:absolute;
+
+  }
+
+/* //////////////////////////////////////////// */
 .LandingPageBox4{
 
 width: 100vw; /* 100% of the viewport width */
@@ -304,6 +324,23 @@ background-color: white;
     height: auto;    /* Maintains the aspect ratio */
     display: block;  /* Removes any extra space below the image */
   padding-top: 2rem;
-  padding-bottom: 2rem;
   
 }
+/* //////////////////////////////////////////////// */
+.LandingPageBox5{
+
+  width: 100vw; /* 100% of the viewport width */
+  height: 90vh;
+  background-color:#232323;
+  }
+  #BackGroundImgBox5{
+    
+      width: 100%; /* Ensures the image doesn't overflow its container */
+      height: auto;    /* Maintains the aspect ratio */
+      display: block;  /* Removes any extra space below the image */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+  }
+
+  
