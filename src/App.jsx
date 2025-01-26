@@ -1,103 +1,109 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 import SignUp from "./Components/LandingPage/SignUp/SignUp";
 import SignIn from "./Components/LandingPage/SignIn/SignInForm";
+import Footer from'./Components/Footer/Foooter.jsx'
+
+import ViewProducts from './Components/Products/ViewProducts.jsx'
 
 function App() {
 
 
+
+
   const isMobile = useMediaQuery({ maxWidth: 750 });
-  const [coverContent,setCover] = useState("Already have an account??")
-  const [content,changeContent] = useState("SignIn");
+  const [coverContent, setCover] = useState("Already have an account??");
+  const [content, changeContent] = useState("SignIn");
   const [style, setStyle] = useState({
-    position: 'absolute',
-    backgroundColor: 'rgb(146, 35, 35)',
-    height: '92.5vh',
-    marginTop: '1.4rem',
-    width: '50%',
-    transition: 'transform 1s ease',
-    overflow: 'hidden',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    fontSize: '2rem',
-    fontFamily: 'Times New Roman, serif',
-    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)', // Add the box shadow here
-  })
-  
-
-useEffect( () =>{
-  setStyle({
-    ...style,
-    height: '45vh',
-    width: '100%',
+    position: "absolute",
+    backgroundColor: "rgb(146, 35, 35)",
+    height: "90vh",
+    marginTop: "1.4rem",
+    width: "50%",
+    transition: "transform 1s ease",
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "center",
+    fontSize: "2rem",
+    fontFamily: "Times New Roman, serif",
+    boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Add the box shadow here
   });
-},[isMobile])
 
-useEffect(() => {
-  setStyle((prevStyle) => ({
-    ...prevStyle,
-    height: isMobile ? "45vh" : "92.5vh",
-    marginTop: isMobile ? '0rem': '1.4rem',
-    width: isMobile ? "100%" : "50%",
-    transform: "translateY(-10)", // Reset on screen resize
-  }));
-}, [isMobile]);
-  
+const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combine the latest trends with eco-friendly, high-quality materials. We ensure fast shipping, affordable prices, and exceptional customer support, giving you a seamless and satisfying shopping experience.";
+
+  useEffect(() => {
+    setStyle({
+      ...style,
+      height: "45vh",
+      width: "100%",
+    });
+  }, [isMobile]);
+
+  useEffect(() => {
+    setStyle((prevStyle) => ({
+      ...prevStyle,
+      height: isMobile ? "45vh" : "90vh",
+      marginTop: isMobile ? "0rem" : "1.4rem",
+      width: isMobile ? "100%" : "50%",
+      transform: "translateY(-10)", // Reset on screen resize
+    }));
+  }, [isMobile]);
+
   const handleClick = () => {
     if (isMobile) {
       if (content === "SignIn") {
         changeContent("Register");
-        setCover("Need an account?")
+        setCover("Need an account?");
         setStyle({
           ...style,
-          transform: 'translateY(107%)',
-          height: '45vh',
-          width: '100%',
+          transform: "translateY(107%)",
+          height: "45vh",
+          width: "100%",
         });
       } else {
         changeContent("SignIn");
-        setCover("Already have an account?? ")
+        setCover("Already have an account?? ");
         setStyle({
           ...style,
-          transform: 'translateY(0)',
-          height: '45vh',
-          width: '100%',
+          transform: "translateY(0)",
+          height: "45vh",
+          width: "100%",
         });
       }
     } else {
       if (content === "SignIn") {
         changeContent("Register");
-        setCover("Need an account? ")
+        setCover("Need an account? ");
         setStyle({
           ...style,
-          transform: 'translateX(100%)',
-          height: '92.5vh',
-          marginTop:'1.4rem',
-          width: '50%',
+          transform: "translateX(100%)",
+          height: "90vh",
+          marginTop: "1.4rem",
+          width: "50%",
         });
       } else {
         changeContent("SignIn");
-                setCover("Already have an account?? ")
+        setCover("Already have an account?? ");
 
         setStyle({
           ...style,
-          transform: 'translateX(0)',
-          height: '92.5vh',
-          marginTop:'1.4rem',
-          width: '50%',
+          transform: "translateX(0)",
+          height: "90vh",
+          marginTop: "1.4rem",
+          width: "50%",
         });
       }
     }
   };
 
   return (
-
-
-
     <div className="MainDiv">
+
+
+
       <div className="LandingPageBox1">
         <div className="LeftSideBox1">
           <div className="MenSectionText">
@@ -111,7 +117,7 @@ useEffect(() => {
             <h1> Arrived Now </h1>
           </div>
           <h3> Latest Man Trends </h3>
-          <button id="ShopNow"> Shop Now </button>
+          <button id="ShopNow"  > Shop Now </button>
         </div>
 
         <div className="RightSideBox1">
@@ -142,27 +148,35 @@ useEffect(() => {
       </div>
 
       <div className="LandingPageBox3">
-
-        <div id="SignIn"><SignIn /></div>
-        <div id="SignUp"> <SignUp /> </div>
+        <div id="SignIn">
+          <SignIn />
+        </div>
+        <div id="SignUp">
+          <SignUp />
+        </div>
         <div id="Cover" style={style}>
-          <img  id="Slider" src={"src/assets/Pics/LandingPage/Slider3.png"}  />
+          <img id="Slider" src={"src/assets/Pics/LandingPage/Slider3.png"} />
           <p id="CoverContent"> {coverContent} </p>
-          <button id="Switch" onClick={handleClick}> {content} </button>
-       </div>
-        
-          
-           </div>
-           <div className="LandingPageBox4">
-            <img id="BackGroundImgBox4" src="src/assets/Pics/LandingPage/Box4.png"/>
-           </div>
-           <div className="LandingPageBox5">
-            <img id="BackGroundImgBox5" src="src/assets/Pics/LandingPage/Box5.png"/>
+          <button id="Switch" onClick={handleClick}>
+            {content}
+          </button>
+        </div>
+      </div>
+      <div className="LandingPageBox4">
+        <img
+          id="BackGroundImgBox4"
+          src="src/assets/Pics/LandingPage/Box4.png"
+        />
 
-           </div>
-
+      </div>
+      <div className="LandingPageBox5">
+      <img
+          id="BackGroundImgBox5"
+          src="src/assets/Pics/LandingPage/Box5.png"
+        />
+      </div>
+      <Footer />
     </div>
   );
-
 }
 export default App;

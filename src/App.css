@@ -71,17 +71,47 @@
 
   
 }
-
-#SignIn{
-margin-right: 10rem;
-  margin-top: 5rem;
 }
+@media (min-height :550px){
 
+  
+  #SignIn{
+    margin-top: 0.5rem;
+  }
+  #SignUp{
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+  }
+  }
+@media (min-height :650px){
+
+  
+#SignIn{
+  margin-top: 0.5rem;
+}
 #SignUp{
-  margin-bottom: 2rem;
+  margin-top: 6.5rem;
   margin-left: 1rem;
 }
 }
+@media (min-height :810px){
+
+  
+
+  #SignUp{
+    margin-top: 10rem;
+    margin-left: 1rem;
+  }
+  }
+  @media (min-height :910px){
+
+  
+
+    #SignUp{
+      margin-top: 11rem;
+      margin-left: 1rem;
+    }
+    }
 
 
 
@@ -333,18 +363,15 @@ background-color: white;
 .LandingPageBox5{
 
   width: 100vw; /* 100% of the viewport width */
-  height: 90vh;
-  background-color:#232323;
-  }
-  #BackGroundImgBox5{
-    
-      width: 100%; /* Ensures the image doesn't overflow its container */
-      height: auto;    /* Maintains the aspect ratio */
-      display: block;  /* Removes any extra space below the image */
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   
-    
-  }
+}
+#BackGroundImgBox5{
+  
+  width: 100%; /* Ensures the image doesn't overflow its container */
+  height: auto; 
+  object-fit: fill;   /* Maintains the aspect ratio */
+padding-top: 2rem;
+
+}
 
   
