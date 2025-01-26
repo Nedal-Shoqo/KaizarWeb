@@ -1,97 +1,80 @@
-/* General page styling */
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures elements stay within bounds */
+}
+
 .Page {
   height: 100%;
   width: 100%;
-  background-color: #EBEBEB; /* A darker brown for a polished look */
+  background-color: #EBEBEB;
   font-family: 'Arial', sans-serif;
   color: white;
 }
 
-/* Main layout styling */
+/* Main layout */
 .Main {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin-left:1rem ;
-  margin-right: 1rem;
+  margin: 4rem;
   height: 85vh;
-  margin-bottom: 1rem;
-
+  max-width: 100%;
 }
 
-/* Categories sidebar */
+/* Sidebar */
 .Categories {
-  background-color:#EBEBEB;
+  text-wrap: wrap;
+  background-color: #EBEBEB;
   min-width: 20%;
+  max-width: 25%;
   padding: 0.8rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
+  overflow-y: auto;
 }
 
-#ShopCat{
-margin-top: 5rem;
-color: #333;
-font-size: 20px;
-font-style: normal;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+#ShopCat {
+  margin-top: 5rem;
+  color: #333;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
+/* Button styling */
 .Categories button,
 #ResButton {
   background-color: transparent;
   color: #333;
-  width: 100%; /* Full width by default */
+  width: 100%;
   padding: 0.8rem;
   margin: 0.5rem 0;
-  font-size: 1rem;
-  border-width: 1px;
-  border-color: #f1eded;
-  cursor:pointer  ;
+  font-size: 0.7rem;
+  border: 1px solid #f1eded;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
- 
 }
 
-.Categories button:hover
-{
+.Categories button:hover {
   background-color: #885151;
   color: #fff;
   transform: scale(1.05);
 }
 
 #ResButton:hover {
-  background-color:transparent;
+  background-color: transparent;
   color: #020000;
   transform: scale(1.05);
-  border-color:#885151;
-  border-width: 2px;
-}
-/* Default visibility for #ResButton */
-#ResButton {
-  display: block; 
-  background-color: #c47777;
-  color: #EBEBEB;
-  border-radius: 10px;
+  border: 2px solid #885151;
 }
 
-/* Options container (hidden by default) */
-.Options {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  gap: 0.5rem;
-  
-}
-
-/* Show options when 'show' class is added */
-.Options.show {
-  display: flex; /* Show when the class is toggled */
-}
-
-/* Products section */
+/* Products */
 .Products {
-  background-color: #c47777; /* A softer blue */
-  width: 100%;
-  height: 90%;
+  background-color: #c47777;
+  flex: 1; /* Takes available space */
+  height: auto;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -101,21 +84,22 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   justify-content: center;
   font-size: 1.2rem;
   text-align: center;
+  /* overflow: auto; */
 }
-.RightSide{
-  background-color: #EBEBEB; /* A softer blue */
-  width: 80%;
+
+/* Right-side content */
+.RightSide {
+  background-color: #EBEBEB;
+  flex: 3; /* Adjusts with the sidebar */
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: white;
   display: flex;
   flex-direction: column;
 }
 
-#HeaderForProducts
-{
-  background-color: #000000; /* A softer blue */
+#HeaderForProducts {
+  background-color: #000000;
   width: 100%;
   height: 6rem;
   margin-bottom: 3rem;
@@ -123,10 +107,10 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   font-size: 2.5rem;
+  
 }
-
 
 /* Breadcrumb */
 .Page p {
@@ -140,58 +124,105 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 @media (max-width: 600px) {
   .Main {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+  }
+  #HeaderForProducts {
+    
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 70%;
+    margin-left: 3.5rem;
   }
 
-  .Categories{
-    margin-top: 3rem;
+  .Categories {
+    margin-top: 2rem;
+    width: 120%; /* Full width on mobile */
+    overflow: none;
+    margin-right: 34rem;
   }
-  .Options{
+
+  .Options {
     flex-direction: row;
   }
 
   #ResButton {
-    display: block; /* Make the button visible on mobile */
+    display: block;
   }
 
-  .RightSide{
+  .RightSide {
     margin-top: 2rem;
+    width: 100%;
   }
+
   .Products {
     width: 100%;
-  }
-
-  .Categories button {
-    width: 100%;
+    height: auto; /* Adjusts height automatically */
   }
 }
-/* 
-@media (max-width: 768px) {
-  .Main {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .Categories{
-    margin-top: 3rem;
-  }
-  .Options{
-    flex-direction: row;
-  }
 
+
+
+
+/* //////////////////// */
+@media (max-width: 870px) {
+  .Categories button,
   #ResButton {
-    display: block; 
-  }
+    font-size:0.7rem ;
+}
 
-  .RightSide{
-    margin-top: 2rem;
-  }
-  .Products {
-    width: 100%;
-  }
 
-  .Categories button {
-    width: 100%;
-  }
-} */
+.Options{
 
+height: 60%;
+
+}
+.Categories{
+
+  min-width: 25%;
+}
+}
+@media (max-width: 770px) {
+  .Categories button,
+  #ResButton {
+    font-size:0.7rem ;
+}
+
+
+.Options{
+
+height: 60%;
+
+}
+.Categories{
+
+  min-width: 30%;
+}
+
+
+
+}
+
+
+
+@media (max-width: 720px) {
+  .Categories button,
+  #ResButton {
+    font-size:0.7rem ;
+}
+
+
+.Options{
+
+height: 60%;
+
+}
+.Categories{
+
+  min-width: 35%;
+}
+
+
+
+}

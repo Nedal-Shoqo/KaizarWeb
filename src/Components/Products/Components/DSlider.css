@@ -1,5 +1,19 @@
 
-  
+@media (max-width: 750px) {
+
+  .slider-container {
+    max-width: 100%;
+    margin-left: 1rem;
+  }
+
+
+}
+.slider-container {
+  max-width: 100px;
+  text-align: center;
+  margin-left: 1rem;
+}
+
   .slider-title {
     font-size: 28px;
     font-weight: 600;

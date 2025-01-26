@@ -6,8 +6,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Categories</h4>
             <ul>
-              <li>Men's Clothing</li>
-              <li>Women's Clothing</li>
+              <li > <a href='/Men'> Men's Clothing</a></li>
+              <li> <a href='/'>  Women's Clothing</a></li>
               <li>New Arrivals</li>
               <li>Sale</li>
             </ul>
@@ -34,12 +34,6 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h4> <img src="src/assets/Pics/NavBar/KaizarLogo.png" /></h4>
-            <ul>
-              <li>Loyalty Program</li>
-              <li>Special Offers & Discounts</li>
-              <li>Lookbook</li>
-              <li>Careers</li>
-            </ul>
           </div>
         </div>
         <div className="footer-bottom">

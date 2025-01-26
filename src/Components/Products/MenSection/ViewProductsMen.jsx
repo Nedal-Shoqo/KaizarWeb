@@ -3,7 +3,7 @@ import Footer from '../../Footer/Foooter.jsx';
 import Dslider from '../Components/DSlider.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import './ViewProductsMen.css';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
  // Logs the current URL path (e.g., "/")
 
 const ProductsPage = () => {
@@ -27,8 +27,10 @@ const ProductsPage = () => {
       <br />
 
 
-      <p id='ShopCat'> Home / Shop / {Category} </p>
 
+      <p id="ShopCat">
+  <Link to="/">Home</Link> / Shop / {Category}
+</p>
       <div className='Main'>
         <div className='Categories'>
           {/* Step 3: Button to toggle options visibility */}
