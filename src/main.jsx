@@ -4,15 +4,17 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 
 import './index.css'
 import App from './App.jsx'
-import ViewProducts from './Components/Products/ViewProducts.jsx'
-
+import MenSection from './Components/Products/MenSection/ViewProductsMen.jsx'
+import WomenSection from './Components/Products/WomenSection/ViewProductsWomen.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path="/Products" element={<ViewProducts />} />
+        <Route path="/Men" element={<MenSection />} />
         <Route path='/' element={<App/>} />
+        <Route path='/Women' element={<WomenSection/>} />
+        
       </Routes>
     </Router>
   </StrictMode>,

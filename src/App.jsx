@@ -7,7 +7,6 @@ import Footer from'./Components/Footer/Foooter.jsx'
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 
-import ViewProducts from './Components/Products/ViewProducts.jsx'
 
 function App() {
 
@@ -121,7 +120,7 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
             <h1> Arrived Now </h1>
           </div>
           <h3> Latest Man Trends </h3>
-          <button id="ShopNow" onClick={ ()=>{ navigate('/Products') } }  > Shop Now </button>
+          <button id="ShopNow" onClick={ ()=>{ navigate('/Men') } }  > Shop Now </button>
         </div>
 
         <div className="RightSideBox1">
@@ -137,12 +136,12 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
         <div className="MenAndWoman">
           <div id="Men">
             <p id="MenText"> Discover The Mans World </p>
-            <button id="MenButton"> View Now!</button>
+            <button id="MenButton" onClick={ ()=>{navigate('/Men') } }> View Now!</button>
           </div>
 
           <div id="Woman">
             <p id="WomanText"> Explore The Womens Fashion </p>
-            <button id="WomanButton"> Join Now!</button>
+            <button id="WomanButton" onClick={ ()=>{navigate('/Women') }}> Join Now!</button>
           </div>
         </div>
 

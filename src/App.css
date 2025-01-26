@@ -327,7 +327,7 @@ transition: 0.5s ease;
 /*///////////////////////////////////////////*/
 
 .LandingPageBox3{
-  background:linear-gradient(rgb(61, 57, 57), rgb(146, 35, 35));
+  background:linear-gradient(rgb(61, 57, 57), rgb(146, 35, 35),rgb(61, 57, 57));
   background-size: cover; /* Ensures the image covers the div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; 

@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import Footer from '../Footer/Foooter.jsx';
-import Dslider from '../Products/Components/DSlider.jsx';
-import Navbar from '../Navbar/Navbar.jsx';
-import './ViewProducts.css';
+import Footer from '../../Footer/Foooter.jsx';
+import Dslider from '../Components/DSlider.jsx';
+import Navbar from '../../Navbar/Navbar.jsx';
+import './ViewProductsMen.css';
+import { useLocation } from 'react-router-dom';
+ // Logs the current URL path (e.g., "/")
 
 const ProductsPage = () => {
+
   // Step 1: Initialize state to control the visibility of options
   const [showOptions, setShowOptions] = useState(false);
 
@@ -13,8 +16,11 @@ const ProductsPage = () => {
     setShowOptions(!showOptions);
   };
 
-  const Category = " None ";
+ 
+ const location = useLocation();
+ const pathWithoutSlash = location.pathname.replace(/^\/+/, ''); // Removes leading slashes
 
+ const Category = pathWithoutSlash;
   return (
     <div className='Page'>
       <Navbar />
@@ -37,7 +43,7 @@ const ProductsPage = () => {
             <button id='Shirts'> Shirts </button>
             <button id='Jackets'> Jackets & Coats </button>
             <button id='Jeans'> Jeans </button>
-            <button id='Shorts'> Shorts </button>
+            <button id='Bottoms'> Bottoms </button>
              <Dslider />
           </div>
 
