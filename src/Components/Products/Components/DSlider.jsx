@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Dslider.css';
 
 const DoubleRangeSlider = () => {
   const [minValue, setMinValue] = useState(10); // Minimum slider value
@@ -17,16 +18,14 @@ const DoubleRangeSlider = () => {
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto">
-      <h1 className="text-lg font-semibold text-gray-800 mb-4">
-        Price Range Slider
-      </h1>
-      <div className="relative">
+    <div className="slider-container">
+      <h1 className="slider-title">Price</h1>
+      <div className="slider-wrapper">
         {/* Slider track */}
-        <div className="h-1 bg-gray-300 rounded absolute inset-0" />
+        <div className="slider-track"></div>
         {/* Selected range */}
         <div
-          className="h-1 bg-blue-500 rounded absolute"
+          className="slider-range"
           style={{
             left: `${((minValue - min) / (max - min)) * 100}%`,
             right: `${100 - ((maxValue - min) / (max - min)) * 100}%`,
@@ -39,23 +38,21 @@ const DoubleRangeSlider = () => {
           max={max}
           value={minValue}
           onChange={handleMinChange}
-          className="absolute w-full appearance-none pointer-events-auto z-10 accent-blue-500"
-          style={{ left: 0 }}
+          className="slider-input slider-input-min"
         />
-        {/* Max Slider */}
+        {/* Max Slider */} <br/>
         <input
           type="range"
           min={min}
           max={max}
           value={maxValue}
           onChange={handleMaxChange}
-          className="absolute w-full appearance-none pointer-events-auto z-10 accent-blue-500"
-          style={{ right: 0 }}
+          className="slider-input slider-input-max"
         />
       </div>
-      <div className="flex justify-between mt-6">
-        <span className="text-gray-600">Min: ${minValue}</span>
-        <span className="text-gray-600">Max: ${maxValue}</span>
+      <div className="slider-value">
+        <span>From  <h2> ${minValue}</h2>To </span>
+        <span> <h2>${maxValue} </h2></span>
       </div>
     </div>
   );

@@ -4,6 +4,8 @@ import { useMediaQuery } from "react-responsive";
 import SignUp from "./Components/LandingPage/SignUp/SignUp";
 import SignIn from "./Components/LandingPage/SignIn/SignInForm";
 import Footer from'./Components/Footer/Foooter.jsx'
+import { useNavigate } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar.jsx";
 
 import ViewProducts from './Components/Products/ViewProducts.jsx'
 
@@ -99,11 +101,13 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
     }
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="MainDiv">
 
 
-
+     <Navbar />
       <div className="LandingPageBox1">
         <div className="LeftSideBox1">
           <div className="MenSectionText">
@@ -117,7 +121,7 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
             <h1> Arrived Now </h1>
           </div>
           <h3> Latest Man Trends </h3>
-          <button id="ShopNow"  > Shop Now </button>
+          <button id="ShopNow" onClick={ ()=>{ navigate('/Products') } }  > Shop Now </button>
         </div>
 
         <div className="RightSideBox1">

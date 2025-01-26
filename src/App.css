@@ -39,11 +39,30 @@
   #Men {
     width: 200px !important;
     height: 300px !important;
+   
+
+
     
   }
   #Woman {
     width: 200px !important;
     height: 300px !important;
+
+  }
+
+
+  #MenText{
+    margin-bottom: 5rem;
+  }
+  #MenButton{
+    margin:1rem;
+  }
+  
+  #WomanText{
+    margin-bottom: 5rem;
+  }
+  #WomanButton{
+    margin:1rem;
   }
 }
 
@@ -56,6 +75,20 @@
     #Woman {
       width: 150px !important;
       height: 300px !important;
+    }
+
+    #MenText{
+      margin-bottom: 5rem;
+    }
+    #MenButton{
+      margin:1rem;
+    }
+    
+    #WomanText{
+      margin-bottom: 5rem;
+    }
+    #WomanButton{
+      margin:1rem;
     }
 }
 
@@ -249,6 +282,8 @@ width:  50%;
 #Men:hover{
   opacity: 50%;
 transition: 0.5s ease;
+  transform: scale(0.9);
+
 
 }
 #Men:hover #MenText, 
@@ -271,6 +306,8 @@ transition: 0.5s ease;
 #Woman:hover{
   opacity: 50%;
 transition: 0.5s ease;
+  transform: scale(0.9);
+
 }
 #Woman:hover #WomanText, 
 #Woman:hover #WomanButton {

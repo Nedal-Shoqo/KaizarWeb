@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 
 import './index.css'
 import App from './App.jsx'
-import Navbar from './Components/NavBar/Navbar.jsx'
 import ViewProducts from './Components/Products/ViewProducts.jsx'
 
 
