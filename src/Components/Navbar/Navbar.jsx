@@ -13,7 +13,7 @@ const Navbar = () => {
 
         <nav className="Nav">
             
-            <a href="/" className="WishList"></a>
+            <a href="/Wishlist" className="WishList"></a>
             <a href="/" className="Account"></a>
             <a href="/Cart" className="Cart" ></a>
         

@@ -7,6 +7,7 @@ import App from './App.jsx'
 import MenSection from './Components/Products/MenSection/ViewProductsMen.jsx'
 import WomenSection from './Components/Products/WomenSection/ViewProductsWomen.jsx'
 import Cart from './Components/Cart/Cart.jsx';
+import WishList from './Components/WishList/WishList.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App/>} />
         <Route path='/Women' element={<WomenSection/>} />
         <Route path='/Cart' element={<Cart/>} />
+        <Route path='/Wishlist' element={<WishList/>} />
 
       </Routes>
     </Router>
