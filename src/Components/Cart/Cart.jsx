@@ -34,7 +34,7 @@ const ProductsPage = () => {
       <p id="ShopCat">
   <Link to="/">Home</Link> / Shop / {Category}
 </p>
-      <div className='Main'>
+      <div className='main'>
         <div className='Order'>
           {/* Step 3: Button to toggle options visibility */}
           <div id='Summary' >
