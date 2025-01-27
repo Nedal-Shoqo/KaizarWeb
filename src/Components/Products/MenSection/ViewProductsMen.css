@@ -37,6 +37,19 @@
   gap: 0.5rem; /* Adjust gap between buttons */
 }
 
+
+#SlidersPrice{
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 2rem;
+margin-top: 1rem;
+
+}
+
+
+
 #ShopCat {
   margin-top: 5rem;
   color: #333;

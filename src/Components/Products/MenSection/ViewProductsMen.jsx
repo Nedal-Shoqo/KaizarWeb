@@ -46,7 +46,8 @@ const ProductsPage = () => {
             <button id='Jackets'> Jackets & Coats </button>
             <button id='Jeans'> Jeans </button>
             <button id='Bottoms'> Bottoms </button>
-             <Dslider />
+
+            <span id="SlidersPrice"><Dslider /> </span>
           </div>
 
          
