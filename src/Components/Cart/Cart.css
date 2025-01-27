@@ -24,7 +24,7 @@
   }
   
   .Order {
-    
+    text-align: center;
     text-wrap: wrap;
     background-color: #EBEBEB;
     min-width: 20%;
@@ -36,7 +36,7 @@
     display: flex;
     flex-direction: column; /* Adjusting flex layout to avoid unnecessary space */
     gap: 0.5rem;
-    height: 50%; /* Adjust gap between buttons */
+    height: 70%; /* Adjust gap between buttons */
   }
 
   
@@ -52,6 +52,8 @@
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
+  border-radius: 10px;
+
 }
   #Discount{
     border: 1px solid #000000;
@@ -64,12 +66,14 @@
     transition: all 0.3s ease-in-out;
     box-sizing: border-box; 
     margin-bottom: 0.5rem;
+    border-radius: 10px;
 
     
   }
   
   #Total{
     border: 1px solid #000000;
+    border-radius: 10px;
 
     background-color: transparent;
     color: #333;

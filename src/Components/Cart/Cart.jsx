@@ -7,9 +7,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 const ProductsPage = () => {
 
-  const Price =0;
-  const Discounts =0;
-  const TotalPrice =0;
+  const [price, setPrice] = useState(100);
+  const [discounts, setDiscounts] = useState(20);
+  const [totalPrice, setTotalPrice] = useState(price - discounts);
 
   // Step 1: Initialize state to control the visibility of options
   const [showOptions, setShowOptions] = useState(false);
@@ -43,9 +43,9 @@ const ProductsPage = () => {
 
           {/* Step 4: Conditionally apply 'show' class to display options */}
           <div className="Calculates">
-          <div id='Price'> Items Subtotal:  {Price} </div>
-          <div id='Discount'> Discounts:  {Discounts} </div>
-          <div id='Total'>  Total Price:  {TotalPrice} </div>
+          <div id='Price'> Items Subtotal:  {price}$ </div>
+          <div id='Discount'> Discounts:  {discounts}$ </div>
+          <div id='Total'>  Total Price:  {totalPrice}$ </div>
           <button id='OrderButton'> Go To Checkout </button>
           <p id='Policies'> By placing your order ,you agree to be bound by the Kaizar <a id='ImportantText'>Terms of Service</a> and  <a id='ImportantText'> Privacy Policy </a>. </p>
           </div>
