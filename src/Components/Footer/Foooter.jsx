@@ -7,7 +7,7 @@ const Footer = () => {
             <h4>Categories</h4>
             <ul>
               <li > <a href='/Men'> Men's Clothing</a></li>
-              <li> <a href='/'>  Women's Clothing</a></li>
+              <li> <a href='/Women'>  Women's Clothing</a></li>
               <li>New Arrivals</li>
               <li>Sale</li>
             </ul>
