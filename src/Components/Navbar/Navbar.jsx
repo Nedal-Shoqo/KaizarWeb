@@ -15,7 +15,7 @@ const Navbar = () => {
             
             <a href="/" className="WishList"></a>
             <a href="/" className="Account"></a>
-            <a href="/" className="Cart" ></a>
+            <a href="/Cart" className="Cart" ></a>
         
 
 

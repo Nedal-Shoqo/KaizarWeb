@@ -6,7 +6,7 @@ import './index.css'
 import App from './App.jsx'
 import MenSection from './Components/Products/MenSection/ViewProductsMen.jsx'
 import WomenSection from './Components/Products/WomenSection/ViewProductsWomen.jsx'
-
+import Cart from './Components/Cart/Cart.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
@@ -14,7 +14,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Men" element={<MenSection />} />
         <Route path='/' element={<App/>} />
         <Route path='/Women' element={<WomenSection/>} />
-        
+        <Route path='/Cart' element={<Cart/>} />
+
       </Routes>
     </Router>
   </StrictMode>,
