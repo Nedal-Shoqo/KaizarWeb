@@ -7,14 +7,11 @@ import { Link, useLocation } from 'react-router-dom';
  // Logs the current URL path (e.g., "/")
 
 const ProductsPage = () => {
-
-
-
  
  const location = useLocation();
  const pathWithoutSlash = location.pathname.replace(/^\/+/, ''); // Removes leading slashes
 
-const color = ['red' , 'white' , 'black' , 'yellow' ];
+const color = ['red' , 'white' , 'black' , 'yellow' , 'green' ];
 const size =["XXl","XL","L","M"];
 
 const [category, setCategory] = useState(pathWithoutSlash);
@@ -51,7 +48,7 @@ function AmounrReducer(){
       <p id="ShopCat">
   <Link to="/">Home</Link> / Shop / {category}
 </p>
-      <div className='Main'>
+      <div className='MainContiener'>
         <div className='ProductOptions'>
          
           <div className="Details">
@@ -67,8 +64,6 @@ function AmounrReducer(){
       </div>
       <div id='colors'></div>
       <p style={{color:"black"  , fontSize:"1.5rem"}}>Colors : </p>    
-      
-      
       
       <br />
       {colorArray.map((backColor) => (
@@ -110,7 +105,7 @@ function AmounrReducer(){
     })}
 
 
-       <div className="AmountCounter">  <button onClick={AmounrReducer}> - </button> {Amount} <button onClick={AmountAdder}> + </button>  </div>
+       <div className="AmountCounter">  <button id='Reducer' onClick={AmounrReducer}> - </button>  {Amount} <button id='Adder' onClick={AmountAdder}> + </button>  </div>
           </div>
 
           <div id='Save'> <button id='cart'> Add To Cart </button>  <button id='WishList'>  </button>  </div>

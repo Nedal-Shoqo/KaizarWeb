@@ -12,12 +12,9 @@ const ProductsPage = () => {
   const TotalPrice =0;
 
   // Step 1: Initialize state to control the visibility of options
-  const [showOptions, setShowOptions] = useState(false);
 
   // Step 2: Handle button click to toggle options visibility
-  const handleToggleOptions = () => {
-    setShowOptions(!showOptions);
-  };
+
 
  
  const location = useLocation();

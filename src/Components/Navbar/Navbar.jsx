@@ -7,7 +7,7 @@ const Navbar = () => {
     return ( 
     <header className="Header">
         <div  className="leftSide"> 
-        <a href="/" className="Logo"> <img src="src/assets/Pics/NavBar/KaizarLogo.png" /> </a>
+         <a href="/" className="Logo"> <img src="src/assets/Pics/NavBar/KaizarLogo.png" /> </a>
         </div> 
 
         <nav className="Nav">

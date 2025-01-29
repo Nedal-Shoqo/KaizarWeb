@@ -1,314 +1,157 @@
-/* General styling */
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures elements stay within bounds */
-  }
-  
-  .Page {
-    height: 100%;
-    width: 100%;
-    background-color: #EBEBEB;
-    font-family: 'Arial', sans-serif;
-    color: white;
-  }
-  
-  /* Main layout */
-  .main {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-    margin: 4rem;
-    height: 85vh;
-    max-width: 100%;
-  }
-  
-  .Order {
-    text-align: center;
-    text-wrap: wrap;
-    background-color: #EBEBEB;
-    min-width: 20%;
-    max-width: 25%;
-    padding: 0.8rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column; /* Adjusting flex layout to avoid unnecessary space */
-    gap: 0.5rem;
-    height: 70%; /* Adjust gap between buttons */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-#Price{
+.Page {
+  width: 100%;
+  background-color: #EBEBEB;
+  font-family: Arial, sans-serif;
+  color: white;
+}
 
+/* Main Layout */
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  margin: 4rem;
+  height: 85vh;
+  max-width: 100%;
+}
+
+.Orders {
+  text-align: center;
+  background-color: #EBEBEB;
+  width: 25%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 70%;
+}
+
+/* Pricing Details */
+#Price, #Discount, #Total {
+  border: 1px solid #000;
   background-color: transparent;
   color: #333;
   width: 100%;
   padding: 0.8rem;
-  margin: 0; /* Remove margin */
   font-size: 0.7rem;
-  border: 1px solid #000000;
-  transition: all 0.3s ease-in-out;
-  box-sizing: border-box;
-  margin-bottom: 0.5rem;
   border-radius: 10px;
-
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
-  #Discount{
-    border: 1px solid #000000;
-    background-color: transparent;
-    color: #333;
-    width: 100%;
-    padding: 0.8rem;
-    margin: 0; /* Remove margin */
-    font-size: 0.7rem;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box; 
-    margin-bottom: 0.5rem;
-    border-radius: 10px;
 
-    
-  }
-  
-  #Total{
-    border: 1px solid #000000;
-    border-radius: 10px;
-
-    background-color: transparent;
-    color: #333;
-    width: 100%;
-    padding: 0.8rem;
-    margin: 0; /* Remove margin */
-    font-size: 0.7rem;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box; 
-  }
-  
-  #Policies{
-font-size: 11px;
-color: #020000;
-  }
-  #ImportantText{
-    color: red;
-  }
-  #Price:hover,#Discount:hover,#Total:hover{
-
+#Price:hover, #Discount:hover, #Total:hover {
   font-size: 15px;
-color: red;
-background-color: #e6dddd;
-  }
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #99011E;
+}
 
-  
-  /* Button styling */
-  .Order button,
-  #Summary {
-    background-color: transparent;
-    color: #333;
-    width: 100%;
-    padding: 0.8rem;
-    margin: 0; /* Remove margin */
-    font-size: 0.7rem;
-    border: 1px solid #f1eded;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box; /* Ensure padding doesn't affect the button's box size */
-  }
-  .Order button:hover {
-    background-color: #885151;
-    color: #fff;
-    transform: scale(1.05);
-  }
-  
-  #ResButton:hover {
-    background-color: transparent;
-    color: #020000;
-    transform: scale(1.05);
-    border: 2px solid #885151;
-  }
-  
-  
-  .Products {
-    background-color: #c47777;
-    flex: 1; /* Takes available space */
-    height: auto;
-    min-height: 30vh; /* Ensure a minimum height for the product container */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    text-align: center;
-    flex-shrink: 0; /* Prevent shrinking */
-  }
-  
-  /* Right-side content */
-  .RightSide {
-    background-color: #EBEBEB;
-    flex: 3; /* Adjusts with the sidebar */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #HeaderForCart {
-    width: 40%;
-    height: 6rem;
-    margin-bottom: 3rem;
-    border-radius: 8px;
-    color: rgb(24, 9, 9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  
-  /* Breadcrumb */
-  .Page p {
-    margin: 1rem 2rem;
-    font-size: 0.9rem;
-    color: #f5f5f5;
-    font-style: italic;
-  }
-  
-  /* Responsive design */
-  /* Responsive design */
-  /* Responsive design */
-  /* Responsive design */
-  @media (max-width: 700px) {
-    .Main {
-      display: flex;
-      align-items: flex-start; /* Changed to 'flex-start' for proper alignment */
+#Policies {
+  font-size: 11px;
+  color: #020000;
+}
+
+#ImportantText {
+  color: red;
+}
+
+/* Buttons */
+#Summary{
+  font-size: 21px;
+  color: #020000;
+}
+ #OrderButton{
+  background-color: #885151;
+  color: #ffffff;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.7rem;
+  border: 1px solid #f1eded;
+  transition: all 0.3s ease-in-out;
+}
+
+#OrderButton:hover {
+  background-color: black;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Right-Side Content */
+.RightSide {
+  background-color: #EBEBEB;
+  flex: 3;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+#HeaderForCart {
+  width: 40%;
+  height: 6rem;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  color: rgb(24, 9, 9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.Products {
+  background-color: #c47777;
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Breadcrumb */
+.Page p {
+  margin: 1rem 2rem;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .main {
       flex-direction: column;
       gap: 1rem;
       margin: 1rem;
-      overflow-x: hidden; /* Prevent horizontal overflow */
-    }
+      overflow-x: hidden;
+  }
   
-    #HeaderForProducts {
-      display: none; /* Fixed extra spaces */
-   
-    }
+  .Orders {
+      width: 90%;
+      margin: 0 auto;
+  }
   
-    .Order {
-      
-      width: 90%; /* Full width on mobile */
-      max-width: 90%; /* Ensure it does not shrink */
-      padding: 1rem; /* Add padding for better spacing */
-      margin: 0 auto; /* Center the container */
-      overflow: visible; /*Center the container */
-      
-    }
-    .Options {
-      display: none; /* Hidden by default */
-      width: 100%;
-      height: 100%;
-      overflow-y: auto; /* Add scrollbar for overflow */
-      padding: 0.5rem;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-    }
-  
-    #SlidersPrice{
-       display: none;
-      }
-  
-    .Options.show {
-      display: block;
-      /* Show when active */
-    }
-  
-    #ResButton {
-      display: block;
-      margin-bottom: 1rem; /* Add space below the button */
-      font-size: 1rem;
-    }
-  
-    .RightSide {
+  .RightSide {
       margin-top: 2rem;
-      width: 100%; /* Adjusted width for mobile */
-    }
+      width: 100%;
+  }
   
-    .Products {
-      width: 100%; /* Full width for the product container */
-      display: flex;
-      flex-wrap: wrap; /* Allow cards to wrap within the section */
-      gap: 1rem; 
+  .Products {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem;
       min-height: 20vh;
-    }
-  
-    .Products .Card {
-      width: calc(100% - 2rem); /* Ensure cards fit within the parent */
-      max-width: 100%;
-      box-sizing: border-box;
-      /* Include padding/border in width */
-    }
   }
-  
-  
-  /* //////////////////// */
-  @media (max-width: 870px) {
-    .Categories button,
-    #ResButton {
-      font-size:0.7rem ;
-  }
-  
-  
-  .Options{
-  
-  height: 60%;
-  
-  }
-  .Order{
-  
-    min-width: 25%;
-  }
-  }
-  @media (max-width: 770px) {
-    .Order button,
-    #ResButton {
-      font-size:0.7rem ;
-  }
-  
-  
-  .Options{
-  
-  height: 60%;
-  
-  }
-  .Order{
-  
-    min-width: 30%;
-  }
-  
-  
-  
-  }
-  
-  
-  
-  @media (max-width: 720px) {
-    .Order button,
-    #ResButton {
-      font-size:0.7rem ;
-  }
-  
-  
-  .Options{
-  
-  height: 60%;
-  
-  }
-  .Order{
-  
-    min-width: 35%;
-  }
-  
-  
-  
-  }
+}

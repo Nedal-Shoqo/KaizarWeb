@@ -104,26 +104,28 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
 
   return (
     <div className="MainDiv">
-
-
-     <Navbar />
+      <Navbar />
       <div className="LandingPageBox1">
         <div className="LeftSideBox1">
           <div className="MenSectionText">
-            
-          <br />
-          <br />
-          <br />
-
-            
+            <br />
+            <br />
+            <br />
           </div>
-
           <div className="ArrivedNowDecoration">
             <p id="Line"> | </p>
             <h1> Arrived Now </h1>
           </div>
           <h3> Latest Man Trends </h3>
-          <button id="ShopNow" onClick={ ()=>{ navigate('/Men') } }  > Shop Now </button>
+          <button
+            id="ShopNow"
+            onClick={() => {
+              navigate("/Men");
+            }}
+          >
+            {" "}
+            Shop Now{" "}
+          </button>
         </div>
 
         <div className="RightSideBox1">
@@ -139,12 +141,28 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
         <div className="MenAndWoman">
           <div id="Men">
             <p id="MenText"> Discover The Mans World </p>
-            <button id="MenButton" onClick={ ()=>{navigate('/Men') } }> View Now!</button>
+            <button
+              id="MenButton"
+              onClick={() => {
+                navigate("/Men");
+              }}
+            >
+              {" "}
+              View Now!
+            </button>
           </div>
-
+ 
           <div id="Woman">
             <p id="WomanText"> Explore The Womens Fashion </p>
-            <button id="WomanButton" onClick={ ()=>{navigate('/Women') }}> Join Now!</button>
+            <button
+              id="WomanButton"
+              onClick={() => {
+                navigate("/Women");
+              }}
+            >
+              {" "}
+              Join Now!
+            </button>
           </div>
         </div>
 
@@ -173,10 +191,9 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
           id="BackGroundImgBox4"
           src="src/assets/Pics/LandingPage/Box4.png"
         />
-
       </div>
       <div className="LandingPageBox5">
-      <img
+        <img
           id="BackGroundImgBox5"
           src="src/assets/Pics/LandingPage/Box5.png"
         />
