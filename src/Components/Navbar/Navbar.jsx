@@ -4,6 +4,9 @@ import './Navbar.css'
 const Navbar = () => {
 
 
+
+    
+
     return ( 
     <header className="Header">
         <div  className="leftSide"> 
@@ -14,7 +17,7 @@ const Navbar = () => {
             
             <a href="/Wishlist" className="WishList"></a>
             <a href="/" className="Account"></a>
-            <a href="/Cart" className="Cart" ></a>
+            <a href="/Cart" className="Cart"></a>
         
 
 

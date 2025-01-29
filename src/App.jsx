@@ -53,6 +53,7 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
     }));
   }, [isMobile]);
 
+
   const handleClick = () => {
     if (isMobile) {
       if (content === "SignIn") {
