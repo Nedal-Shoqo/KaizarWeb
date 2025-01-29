@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../../Footer/Foooter.jsx';
 import Dslider from '../Components/DSlider.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
+import Card from '../ProductCard/Card.jsx'
 import './ViewProductsMen.css';
 import { Link, useLocation } from 'react-router-dom';
  // Logs the current URL path (e.g., "/")
@@ -17,6 +18,35 @@ const ProductsPage = () => {
   };
 
  
+
+  const products = [
+    {
+      id: 1,
+      name: "Wireless Headphones",
+      image: "https://example.com/headphones.jpg",
+      price: "99.99",
+      description: "High-quality wireless headphones with noise cancellation.",
+    },
+    {
+      id: 2,
+      name: "Smartwatch",
+      image: "https://example.com/smartwatch.jpg",
+      price: "199.99",
+      description:
+        "A stylish smartwatch with fitness tracking and heart rate monitor.",
+    },
+    {
+      id: 3,
+      name: "Bluetooth Speaker",
+      image: "https://example.com/speaker.jpg",
+      price: "49.99",
+      description:
+        "Portable Bluetooth speaker with deep bass and long battery life.",
+    },
+  ];
+  
+
+
  const location = useLocation();
  const pathWithoutSlash = location.pathname.replace(/^\/+/, ''); // Removes leading slashes
 
@@ -56,7 +86,16 @@ const ProductsPage = () => {
         {/* Products Section */}
         <div className='RightSide'> 
         <div id='HeaderForProducts'> { Category } </div>
-        <div className='Products'> Cards </div>
+        <div className='Products'>
+
+
+        {products.map((product) => (
+              <Card product={product}
+              />
+            ))}
+           
+
+            </div>
         </div>
       </div>
 
