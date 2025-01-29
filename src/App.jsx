@@ -110,9 +110,12 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
       <div className="LandingPageBox1">
         <div className="LeftSideBox1">
           <div className="MenSectionText">
-            <p id="_2"> ___ </p>
-            <h6> Men Section </h6>
-            <p id="_"> ___ </p>
+            
+          <br />
+          <br />
+          <br />
+
+            
           </div>
 
           <div className="ArrivedNowDecoration">

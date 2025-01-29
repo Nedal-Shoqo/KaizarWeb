@@ -1,0 +1,300 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures elements stay within bounds */
+  }
+  
+  .Page {
+    height: 100%;
+    width: 100%;
+    background-color: #EBEBEB;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  /* Main layout */
+  .Main {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin: 4rem;
+    height: 85vh;
+    max-width: 100%;
+  }
+  
+  .ProductOptions {
+    text-wrap: wrap;
+    background-color: #EBEBEB;
+    width: 60%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* Adjusting flex layout to avoid unnecessary space */
+    gap: 0.5rem; /* Adjust gap between buttons */
+  }
+  
+  /* Sliders and Price */
+  #SlidersPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+  
+  /* Shop Category Breadcrumb */
+  #ShopCat {
+    margin-top: 5rem;
+    color: #333;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+  }
+  
+  /* Button Styling */
+  .ProductOptions button,
+  button,
+  #ResButton {
+    background-color: transparent;
+    color: #333;
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0; /* Remove margin */
+    font-size: 0.7rem;
+    border: 1px solid #f1eded;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensure padding doesn't affect the button's box size */
+  }
+  
+  .ProductOptions button:hover {
+    background-color: #885151;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  #ResButton:hover {
+    background-color: transparent;
+    color: #020000;
+    transform: scale(1.05);
+    border: 2px solid #885151;
+  }
+  
+  /* Product Options Section */
+  .Details {
+    padding: 10px;
+  }
+  
+  #colors {
+    margin: 10px 0;
+  }
+  
+  #colors button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .AmountCounter {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .AmountCounter button {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  /* Cart & Wishlist Buttons */
+  #Save {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #cart, #WishList {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #Save{
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #cart {
+    background-color:#99011E;
+    color: white;
+    border: none;
+    width: 150px;
+  }
+  
+  #cart:hover {
+    background-color: black;
+  }
+  
+  #WishList {
+    background-color:#99011E;
+    border: none;
+    width: 150px;
+    height: 100%;
+
+    background-image: url('./../../../assets/Pics/NavBar/WishList.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #WishList:hover {
+    background-color: #020000;
+  }
+  
+  /* Right Side (Product Cards Section) */
+  .RightSide {
+    width: 50%;
+  }
+  
+  .Products {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 300px;
+    background-color: #f9f9f9;
+  }
+  
+  .Products h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 700px) {
+    .Main {
+      display: flex;
+      align-items: flex-start; /* Changed to 'flex-start' for proper alignment */
+      flex-direction: column-reverse;
+      gap: 1rem;
+      margin: 1rem;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+  
+   
+  
+    .ProductOptions {
+      width: 90%; /* Full width on mobile */
+      max-width: 90%; /* Ensure it does not shrink */
+      padding: 1rem; /* Add padding for better spacing */
+      margin: 0 auto; /* Center the container */
+    }
+  
+    .Details {
+      
+      width: 100%;
+      height: 100%;
+      overflow-y: auto; /* Add scrollbar for overflow */
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+  
+    #SlidersPrice {
+      display: none;
+    }
+  
+
+    
+    .Details.show {
+      display: block;
+      /* Show when active */
+    }
+  
+  
+    .RightSide {
+      margin-top: 2rem;
+      width: 100%; /* Adjusted width for mobile */
+    }
+  
+    .Products {
+      width: 100%; /* Full width for the product container */
+      display: flex;
+      flex-wrap: wrap; /* Allow cards to wrap within the section */
+      gap: 1rem;
+      min-height: 20vh;
+    }
+  
+    .Products .Card {
+      width: calc(100% - 2rem); /* Ensure cards fit within the parent */
+      max-width: 100%;
+      box-sizing: border-box;
+      /* Include padding/border in width */
+    }
+  }
+  
+  @media (max-width: 870px) {
+    .Categories button,
+    #ResButton {
+      font-size: 0.7rem;
+    }
+  
+    .Details {
+      height: 60%;
+    }
+  
+    .ProductOptions {
+      min-width: 25%;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .ProductOptions button,
+    #ResButton {
+      font-size: 0.7rem;
+    }
+  
+    .Details {
+      height: 60%;
+    }
+  
+    .ProductOptions {
+      min-width: 30%;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .ProductOptions button,
+    #ResButton {
+      font-size: 0.7rem;
+    }
+  
+    .Details {
+      height: 60%;
+    }
+  
+    .ProductOptions {
+      min-width: 35%;
+    }
+  
+    #WishList {
+      background-image: url('src/assets/Pics/NavBar/WishList.png');
+    }
+  }
+
+  #Prices{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+  }
+  
+  #ProductName{
+    color: #020000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
