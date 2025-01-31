@@ -9,6 +9,7 @@ import WomenSection from './Components/Products/WomenSection/ViewProductsWomen.j
 import Cart from './Components/Cart/Cart.jsx';
 import WishList from './Components/WishList/WishList.jsx'
 import ViewProduct from './Components/Products/ViewProduct/ViewProduct.jsx'
+import AddProducts from './Admin/AddProducts.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/Cart' element={<Cart/>} />
         <Route path='/Wishlist' element={<WishList/>} />
         <Route path='/ViewProduct' element={<ViewProduct/>} />
+        <Route path='/AddProducts' element={<AddProducts/>} />
 
       </Routes>
     </Router>

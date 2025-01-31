@@ -90,13 +90,15 @@ function AmounrReducer(){
   return (
     <button
       style={{
+        textAlign:"center",
         fontSize: "1rem",
-        width:"50px",
+        width:"80px",
         margin:"10px",
         borderRadius: "50%",
         border:"1px solid",
         cursor: "pointer",
         backgroundColor: 'transparent',
+        color:"#99011E"
       }}
     >
       {SIZE}
@@ -104,7 +106,7 @@ function AmounrReducer(){
      );
     })}
 
-
+   <p style={{fontSize:"1.5rem" , color:"black"}}> Count </p>
        <div className="AmountCounter">  <button id='Reducer' onClick={AmounrReducer}> - </button>  {Amount} <button id='Adder' onClick={AmountAdder}> + </button>  </div>
           </div>
 
