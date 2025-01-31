@@ -10,13 +10,40 @@ import Navbar from "./Components/Navbar/Navbar.jsx";
 
 function App() {
 
-
+  const handleSignUp = (userData) => {
+    console.log(userData)
+    fetch('http://localhost:3000/Register', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("Success:", data);
+      // Handle success here (e.g., show success message, navigate, etc.)
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      // Handle error here (e.g., show error message)
+    });
+  };
+  
+  
+  
 
 
   const isMobile = useMediaQuery({ maxWidth: 750 });
   const [coverContent, setCover] = useState("Already have an account??");
   const [content, changeContent] = useState("SignIn");
   const [style, setStyle] = useState({
+
+   
+  
+
+
+
     position: "absolute",
     backgroundColor: "rgb(146, 35, 35)",
     height: "90vh",
@@ -33,7 +60,6 @@ function App() {
     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Add the box shadow here
   });
 
-const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combine the latest trends with eco-friendly, high-quality materials. We ensure fast shipping, affordable prices, and exceptional customer support, giving you a seamless and satisfying shopping experience.";
 
   useEffect(() => {
     setStyle({
@@ -101,6 +127,7 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
     }
   };
 
+  
   const navigate = useNavigate();
 
   return (
@@ -177,7 +204,9 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
           <SignIn />
         </div>
         <div id="SignUp">
-          <SignUp />
+
+          <SignUp onSignUp={handleSignUp} />
+
         </div>
         <div id="Cover" style={style}>
           <img id="Slider" src={"src/assets/Pics/LandingPage/Slider3.png"} />
@@ -202,5 +231,8 @@ const WhyUs ="At Kaizar, we offer more than just fashion. Our collections combin
       <Footer />
     </div>
   );
+
+
+
 }
 export default App;
