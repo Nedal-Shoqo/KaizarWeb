@@ -14,5 +14,10 @@ app.get('/Cart' , (req,res) =>
 
 const Port = 3000;
 
-app.listen(Port , ()=>{ `Server is On Port ${Port}` });
+
+
+const db = require('./models');
+
+db.sequelize.sync().then((req)=>{app.listen(Port , ()=>{console.log(`Server is On Port ${Port}` ) });
+})
  
