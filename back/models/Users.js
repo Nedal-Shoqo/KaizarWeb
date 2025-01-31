@@ -4,10 +4,10 @@ const User = sequelize.define('User', {
     id:{
      type : DataTypes.INTEGER,
      primaryKey:true,
-     auroIncrement:true,
+     autoIncrement:true,
     },
     // Define model attributes
-    username: {
+    fullname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -19,7 +19,12 @@ const User = sequelize.define('User', {
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+     phoneNumber:{
+      type : DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+     },
   }, {
     // Model options (e.g., timestamps)
     timestamps: true,
