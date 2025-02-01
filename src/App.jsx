@@ -31,7 +31,25 @@ function App() {
   };
   
   
-  
+  const handleSignIn = (userD) => {
+    console.log(userD)
+    fetch('http://localhost:3000/Login', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userD),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("Success:", data);
+      // Handle success here (e.g., show success message, navigate, etc.)
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      // Handle error here (e.g., show error message)
+    });
+  };
 
 
   const isMobile = useMediaQuery({ maxWidth: 750 });
@@ -201,7 +219,7 @@ function App() {
 
       <div className="LandingPageBox3">
         <div id="SignIn">
-          <SignIn />
+          <SignIn  onSignIn={handleSignIn} />
         </div>
         <div id="SignUp">
 
